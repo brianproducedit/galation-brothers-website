@@ -36,10 +36,10 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          # Formspree endpoints for form submissions
-          VITE_FORMSPREE_CONTACT_ENDPOINT: ${{ secrets.VITE_FORMSPREE_CONTACT_ENDPOINT || 'https://formspree.io/f/mnjdejyk' }}
-          VITE_FORMSPREE_FEEDBACK_ENDPOINT: ${{ secrets.VITE_FORMSPREE_FEEDBACK_ENDPOINT || 'https://formspree.io/f/xwvogvdy' }}
-          VITE_FORMSPREE_NEWSLETTER_ENDPOINT: ${{ secrets.VITE_FORMSPREE_NEWSLETTER_ENDPOINT || 'https://formspree.io/f/xpqrojor' }}
+          # Formspree endpoints for form submissions (use only form IDs)
+          VITE_FORMSPREE_CONTACT_ENDPOINT: ${{ secrets.VITE_FORMSPREE_CONTACT_ENDPOINT || 'mnjdejyk' }}
+          VITE_FORMSPREE_FEEDBACK_ENDPOINT: ${{ secrets.VITE_FORMSPREE_FEEDBACK_ENDPOINT || 'xwvogvdy' }}
+          VITE_FORMSPREE_NEWSLETTER_ENDPOINT: ${{ secrets.VITE_FORMSPREE_NEWSLETTER_ENDPOINT || 'xpqrojor' }}
           # reCAPTCHA site key
           VITE_RECAPTCHA_SITE_KEY: ${{ secrets.VITE_RECAPTCHA_SITE_KEY || '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI' }}
           # Contact information
