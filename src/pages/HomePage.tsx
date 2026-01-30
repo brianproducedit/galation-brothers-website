@@ -173,13 +173,13 @@ const HomePage: React.FC = () => {
                     <img
                        alt="Galation Logo Small"
                       className="h-10 w-auto"
-                      src={`${import.meta.env.BASE_URL}assets/GalationBrothers_logo.png`}
+                      src="/assets/GalationBrothers_logo.png"
                     />
                     <div className="h-8 w-px bg-blue-900"></div>
                     <img
                       alt="AFC Logo Small"
                       className="h-10 w-auto"
-                      src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
+                      src="/assets/AFC_logo.png"
                     />
                   </div>
                 </div>

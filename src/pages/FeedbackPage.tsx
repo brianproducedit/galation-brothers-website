@@ -309,13 +309,13 @@ const FeedbackPage: React.FC = () => {
                 <img
                   alt="Galation Brothers Logo"
                   className="h-16 w-auto"
-                  src={`${import.meta.env.BASE_URL}assets/GalationBrothers_logo.png`}
+                  src="/assets/GalationBrothers_logo.png"
                 />
                 <div className="h-8 w-px bg-slate-300 dark:bg-slate-600 hidden md:block"></div>
                 <img
                   alt="AFC Holdings Logo"
                   className="h-16 w-auto"
-                  src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
+                  src="/assets/AFC_logo.png"
                 />
               </div>
             </div>

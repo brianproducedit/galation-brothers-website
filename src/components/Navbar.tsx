@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
                 <img
                   alt="Galation Brothers Logo"
                   className="h-10 md:h-20 w-auto rounded p-1 transition-transform group-hover:scale-105"
-                  src={`${import.meta.env.BASE_URL}assets/GalationBrothers_logo.png`}
+                  src="/assets/GalationBrothers_logo.png"
                 />
                 <div className="hidden lg:flex flex-col">
                   <span className="text-xs font-semibold text-gray-600 dark:text-gray-300 leading-tight">
@@ -64,7 +64,7 @@ const Navbar: React.FC = () => {
                   <img
                     alt="AFC Holdings Logo"
                     className="h-9 w-auto mt-1 opacity-80 hover:opacity-100 transition-opacity"
-                    src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
+                    src="/assets/AFC_logo.png"
                   />
                 </div>
               </div>

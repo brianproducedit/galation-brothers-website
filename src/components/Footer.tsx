@@ -19,7 +19,7 @@ const Footer: React.FC = () => {
               <img
                 alt="Galation Brothers Logo"
                 className="h-25 w-auto bg-gray-500 rounded p-1"
-                src={`${import.meta.env.BASE_URL}assets/GalationBrothers_logo.png`}
+                src="/assets/GalationBrothers_logo.png"
               />
             </div>
             <p className="text-gray-400 mb-6 text-sm leading-relaxed">
@@ -30,7 +30,7 @@ const Footer: React.FC = () => {
               <img
                 alt="AFC"
                 className="h-30 w-auto  rounded px-1"
-                src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
+                src="/assets/AFC_logo.png"
               />
             </div>
           </div>
