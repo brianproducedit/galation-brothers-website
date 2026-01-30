@@ -79,13 +79,13 @@ const AboutPage: React.FC = () => {
                   <img
                     alt="Galations Logo"
                     className="h-12 w-auto"
-                    src="/assets/AFC_logo.png"
+                    src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
                   />
                   <span className="text-3xl text-gray-300 font-light">|</span>
                   <img
                     alt="AFC Holdings Logo"
                     className="h-16 w-auto"
-                    src="/assets/GalationBrothers_logo.png"
+                    src={`${import.meta.env.BASE_URL}assets/GalationBrothers_logo.png`}
                   />
                 </div>
                 <h3 className="text-2xl font-display font-bold text-text-light dark:text-white mb-4">
