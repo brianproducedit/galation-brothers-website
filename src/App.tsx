@@ -40,7 +40,9 @@ const App: React.FC = () => {
         },
       ],
     },
-  ]);
+  ], {
+    basename: import.meta.env.BASE_URL || '/'
+  });
 
   return (
     <DarkModeProvider>
