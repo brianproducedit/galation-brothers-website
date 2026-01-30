@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 import { useForm, ValidationError } from '@formspree/react';
 import { FaStar, FaPaperPlane, FaStarHalfAlt, FaCheck, FaExclamationTriangle } from 'react-icons/fa';
 

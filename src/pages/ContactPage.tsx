@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 import { useForm, ValidationError } from '@formspree/react';
 import { FaClipboardList, FaUser, FaEnvelope, FaPhone, FaMapMarkerAlt, FaWhatsapp, FaCheck, FaExclamationTriangle } from 'react-icons/fa';
 

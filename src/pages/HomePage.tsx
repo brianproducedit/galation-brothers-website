@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 import { FaArrowRight, FaCar, FaBroadcastTower, FaBuilding, FaCheck, FaHandHoldingHeart, FaShieldAlt, FaGlobeAfrica } from 'react-icons/fa';
 
 const HomePage: React.FC = () => {

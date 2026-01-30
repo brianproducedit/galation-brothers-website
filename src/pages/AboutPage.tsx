@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet';
 import { FaArrowRight, FaFlag, FaShieldAlt, FaLightbulb } from 'react-icons/fa';
 
 /**
