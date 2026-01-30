@@ -13,6 +13,8 @@ import AboutPage from './pages/AboutPage';
  * Sets up React Router with all page routes and wraps with DarkModeProvider.
  */
 const App: React.FC = () => {
+  console.log('App component is rendering...');
+
   const router = createHashRouter([
     {
       path: '/',
@@ -42,8 +44,13 @@ const App: React.FC = () => {
     },
   ]);
 
+  console.log('Router created:', router);
+
   return (
     <DarkModeProvider>
+      <div style={{ padding: '20px', backgroundColor: 'red', color: 'white' }}>
+        DEBUG: App is rendering!
+      </div>
       <RouterProvider router={router} />
     </DarkModeProvider>
   );
