@@ -8,7 +8,7 @@ import { useForm, ValidationError } from '@formspree/react';
  * Includes company info, links, social media, and newsletter signup.
  */
 const Footer: React.FC = () => {
-  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_NEWSLETTER_ENDPOINT || 'https://formspree.io/f/xpqrojor');
+  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_NEWSLETTER_ENDPOINT || 'xpqrojor');
 
   return (
     <footer className="bg-gray-900 text-white pt-16 pb-8 border-t border-gray-800">
@@ -108,9 +108,12 @@ const Footer: React.FC = () => {
                   <form onSubmit={handleSubmit} className="flex flex-col gap-2">
                     {state.errors && (
                       <div className="bg-red-900/20 border border-red-800 rounded-lg p-2 mb-2">
-                        <div className="flex items-center">
+                        <div className="flex items-center mb-1">
                           <FaExclamationTriangle className="text-red-500 text-xs mr-1" />
-                          <span className="text-red-400 text-xs">Please check your email</span>
+                          <span className="text-red-400 text-xs font-medium">Subscription Error:</span>
+                        </div>
+                        <div className="text-red-300 text-xs ml-4">
+                          {typeof state.errors === 'string' ? state.errors : 'Please check your email address and try again.'}
                         </div>
                       </div>
                     )}

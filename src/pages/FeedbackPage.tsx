@@ -9,7 +9,7 @@ import { FaStar, FaPaperPlane, FaStarHalfAlt, FaCheck, FaExclamationTriangle } f
  */
 const FeedbackPage: React.FC = () => {
   const [rating, setRating] = useState<number>(0);
-  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_FEEDBACK_ENDPOINT || 'https://formspree.io/f/xwvogvdy');
+  const [state, handleSubmit] = useForm(import.meta.env.VITE_FORMSPREE_FEEDBACK_ENDPOINT || 'xwvogvdy');
 
   const handleRatingChange = (newRating: number) => {
     setRating(newRating);
@@ -121,9 +121,12 @@ const FeedbackPage: React.FC = () => {
               <form onSubmit={handleSubmit} className="space-y-6">
                 {state.errors && (
                   <div className="bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg p-4">
-                    <div className="flex items-center">
+                    <div className="flex items-center mb-2">
                       <FaExclamationTriangle className="text-red-500 text-lg mr-2" />
-                      <span className="text-red-800 dark:text-red-400 font-medium">Please check the errors below</span>
+                      <span className="text-red-800 dark:text-red-400 font-medium">Please fix the following errors:</span>
+                    </div>
+                    <div className="text-red-700 dark:text-red-300 text-sm">
+                      {typeof state.errors === 'string' ? state.errors : 'Please check the form fields and try again.'}
                     </div>
                   </div>
                 )}
