@@ -159,6 +159,33 @@ npm run format
 
 This project is proprietary software owned by Galation Brothers Insurance Zimbabwe.
 
+## � Troubleshooting
+
+### Common Issues
+
+**Images not loading in production:**
+- Ensure all image paths use `${import.meta.env.BASE_URL}assets/` instead of `/assets/`
+- Check that images are in the `public/assets/` folder
+
+**Forms not working:**
+- Formspree blocks localhost submissions - test from live GitHub Pages URL
+- Verify Formspree endpoints are correct in environment variables
+- Check reCAPTCHA is enabled in Formspree dashboard
+
+**Routing issues:**
+- Direct URL access (e.g., `/contact`) requires 404.html redirect
+- Ensure `404.html` is copied to `dist/` during build
+
+**Build failures:**
+- Clear `node_modules` and reinstall: `rm -rf node_modules && npm install`
+- Check Node.js version (18+ required)
+- Verify all environment variables are set
+
+### Environment Variables Not Working
+- Variables must be prefixed with `VITE_` to be exposed to client-side code
+- Restart dev server after changing `.env` file
+- Use fallback values in code: `import.meta.env.VITE_VAR || 'default'`
+
 ## 📞 Support
 
 For support or questions:
@@ -171,26 +198,4 @@ For support or questions:
 - **AFC Holdings** - For the trusted partnership
 - **Formspree** - For reliable form handling
 - **React & Vite** - For the amazing developer experience
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
 ```
