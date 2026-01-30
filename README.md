@@ -1,6 +1,6 @@
 # Galation Brothers Insurance Website
 
-[![Deploy to GitHub Pages](https://github.com/yourusername/galation-brothers-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/yourusername/galation-brothers-website/actions/workflows/deploy.yml)
+[![Deploy to GitHub Pages](https://github.com/brianproducedit/galation-brothers-website/actions/workflows/deploy.yml/badge.svg)](https://github.com/brianproducedit/galation-brothers-website/actions/workflows/deploy.yml)
 
 Official website for Galation Brothers Insurance Zimbabwe, providing comprehensive insurance solutions in partnership with AFC Holdings.
 
@@ -18,7 +18,7 @@ Official website for Galation Brothers Insurance Zimbabwe, providing comprehensi
 
 ## 🚀 Live Demo
 
-[https://yourusername.github.io/galation-brothers-website/](https://yourusername.github.io/galation-brothers-website/)
+[https://brianproducedit.github.io/galation-brothers-website/](https://brianproducedit.github.io/galation-brothers-website/)
 
 ## 📋 Prerequisites
 
@@ -29,7 +29,7 @@ Official website for Galation Brothers Insurance Zimbabwe, providing comprehensi
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/galation-brothers-website.git
+   git clone https://github.com/brianproducedit/galation-brothers-website.git
    cd galation-brothers-website
    ```
 
