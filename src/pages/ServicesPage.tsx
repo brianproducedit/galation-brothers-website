@@ -84,13 +84,13 @@ const ServicesPage: React.FC = () => {
               <img
                 alt="Galations Brothers Logo"
                 className="h-10 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                src="/assets/GalationBrothers_logo.png"
+                src={`${import.meta.env.BASE_URL}assets/GalationBrothers_logo.png`}
               />
               <span className="text-xl text-gray-400 dark:text-gray-500">×</span>
               <img
                 alt="AFC Holdings Logo"
                 className="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                src="/assets/AFC_logo.png"
+                src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
               />
             </div>
             <span className="text-green-700 font-semibold text-sm md:text-base dark:text-green-400">Growing Together</span>

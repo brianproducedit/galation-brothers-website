@@ -4,7 +4,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/',
+  base: '/galation-brothers-website/',
   plugins: [react(), tailwindcss()],
   build: {
     rollupOptions: {
