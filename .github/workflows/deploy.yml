@@ -24,12 +24,12 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: '20'
+          node-version: '22'
           cache: 'npm'
 
       - name: Setup Pages
@@ -41,6 +41,7 @@ jobs:
       - name: Build
         run: npm run build
         env:
+          NODE_ENV: production
           # Formspree endpoints for form submissions (use only form IDs)
           VITE_FORMSPREE_CONTACT_ENDPOINT: ${{ secrets.VITE_FORMSPREE_CONTACT_ENDPOINT || 'mnjdejyk' }}
           VITE_FORMSPREE_FEEDBACK_ENDPOINT: ${{ secrets.VITE_FORMSPREE_FEEDBACK_ENDPOINT || 'xwvogvdy' }}
