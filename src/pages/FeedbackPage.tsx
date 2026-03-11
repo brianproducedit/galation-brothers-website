@@ -45,7 +45,7 @@ const FeedbackPage: React.FC = () => {
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
             <h1 className="text-3xl font-display font-extrabold text-white sm:text-4xl">Thank You for Your Feedback</h1>
             <p className="mt-4 text-xl text-blue-100 max-w-2xl">
-              Your voice helps us grow together. Thank you for sharing your experience with Galation Brothers and AFC Holdings.
+              Your voice helps us grow together. Thank you for sharing your experience with Galation Brothers and <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:underline">AFC Holdings</a>.
             </p>
           </div>
         </header>
@@ -103,7 +103,7 @@ const FeedbackPage: React.FC = () => {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left">
           <h1 className="text-3xl font-display font-extrabold text-white sm:text-4xl">Your Voice Matters</h1>
           <p className="mt-4 text-xl text-blue-100 max-w-2xl">
-            Help us grow together. Share your experience with Galations Brothers and AFC Holdings to help us serve Zimbabwe better.
+            Help us grow together. Share your experience with Galations Brothers and <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:underline">AFC Holdings</a> to help us serve Zimbabwe better.
           </p>
         </div>
       </header>
@@ -247,7 +247,7 @@ const FeedbackPage: React.FC = () => {
             <div className="prose dark:prose-invert max-w-none">
               <h3 className="font-display text-2xl font-bold text-slate-900 dark:text-white">Building Trust Through Transparency</h3>
               <p className="text-slate-600 dark:text-slate-300">
-                At Galations Brothers, partnered with AFC Holdings, we believe that honest feedback is the cornerstone of growth. See what our valued clients across Zimbabwe have to say about our partnership and services.
+                At Galations Brothers, partnered with <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">AFC Holdings</a>, we believe that honest feedback is the cornerstone of growth. See what our valued clients across Zimbabwe have to say about our partnership and services.
               </p>
             </div>
             <div className="space-y-6">
@@ -272,7 +272,7 @@ const FeedbackPage: React.FC = () => {
                   </div>
                 </div>
                 <p className="text-slate-600 dark:text-slate-300 italic">
-                  "The partnership with AFC Holdings really gives me peace of mind. Galations Brothers handled my claim with such speed and professionalism. It's rare to find this level of service."
+                  "The partnership with <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">AFC Holdings</a> really gives me peace of mind. Galations Brothers handled my claim with such speed and professionalism. It's rare to find this level of service."
                 </p>
               </div>
 
@@ -315,11 +315,13 @@ const FeedbackPage: React.FC = () => {
                   src={`${import.meta.env.BASE_URL}assets/GalationBrothers_logo.png`}
                 />
                 <div className="h-8 w-px bg-slate-300 dark:bg-slate-600 hidden md:block"></div>
-                <img
-                  alt="AFC Holdings Logo"
-                  className="h-16 w-auto"
-                  src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
-                />
+                <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer">
+                  <img
+                    alt="AFC Holdings Logo"
+                    className="h-16 w-auto"
+                    src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
+                  />
+                </a>
               </div>
             </div>
           </div>

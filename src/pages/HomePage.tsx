@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
           <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-start justify-center h-full text-white">
             <div className="max-w-2xl animate-fade-in-up">
               <span className="inline-block py-1 px-3 rounded-full bg-green-300/20 border border-green-300 text-green-300 text-sm font-bold tracking-wider mb-4">
-                PARTNERED WITH AFC HOLDINGS
+                PARTNERED WITH <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="hover:underline">AFC HOLDINGS</a>
               </span>
 
               <h1 className="font-display text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
@@ -176,11 +176,13 @@ const HomePage: React.FC = () => {
                       src={`${import.meta.env.BASE_URL}assets/GalationBrothers_logo.png`}
                     />
                     <div className="h-8 w-px bg-blue-900"></div>
-                    <img
-                      alt="AFC Logo Small"
-                      className="h-10 w-auto"
-                      src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
-                    />
+                    <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer">
+                      <img
+                        alt="AFC Logo Small"
+                        className="h-10 w-auto"
+                        src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -189,7 +191,7 @@ const HomePage: React.FC = () => {
               <h2 className="text-secondary dark:text-green-400 font-bold uppercase tracking-wide text-sm mb-2">Strategic Alliance</h2>
               <h3 className="font-display text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">Partnered for Your Growth</h3>
               <p className="text-gray-600 dark:text-gray-300 text-lg mb-6 leading-relaxed">
-                Galation Brothers is proud to announce our strategic partnership with <strong>AFC Holdings</strong>. This collaboration brings together deep local expertise and robust financial backing to serve the Zimbabwean market better.
+                Galation Brothers is proud to announce our strategic partnership with <strong><a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">AFC Holdings</a></strong>. This collaboration brings together deep local expertise and robust financial backing to serve the Zimbabwean market better.
               </p>
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">

@@ -40,7 +40,7 @@ const ServicesPage: React.FC = () => {
                   <span className="block text-blue-900">Galations Brothers</span>
                 </h1>
                 <p className="mt-3 text-base text-gray-500 dark:text-gray-300 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-                  Comprehensive insurance solutions tailored for Zimbabwe's unique landscape. Proudly partnered with AFC Holdings to bring you stability, trust, and growth.
+                  Comprehensive insurance solutions tailored for Zimbabwe's unique landscape. Proudly partnered with <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">AFC Holdings</a> to bring you stability, trust, and growth.
                 </p>
                 <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
                   <div className="rounded-md shadow">
@@ -87,11 +87,13 @@ const ServicesPage: React.FC = () => {
                 src={`${import.meta.env.BASE_URL}assets/GalationBrothers_logo.png`}
               />
               <span className="text-xl text-gray-400 dark:text-gray-500">×</span>
-              <img
-                alt="AFC Holdings Logo"
-                className="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
-                src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
-              />
+              <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer">
+                <img
+                  alt="AFC Holdings Logo"
+                  className="h-12 grayscale opacity-70 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                  src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
+                />
+              </a>
             </div>
             <span className="text-green-700 font-semibold text-sm md:text-base dark:text-green-400">Growing Together</span>
           </div>
@@ -221,7 +223,7 @@ const ServicesPage: React.FC = () => {
             <span className="block text-blue-200 text-2xl mt-2">Partner with reliability.</span>
           </h2>
           <p className="mt-4 text-lg leading-6 text-blue-100">
-            Join hundreds of satisfied clients who trust Galations Brothers and AFC Holdings for their insurance needs.
+            Join hundreds of satisfied clients who trust Galations Brothers and <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="text-blue-300 hover:underline">AFC Holdings</a> for their insurance needs.
           </p>
           <Link
             to="/contact"

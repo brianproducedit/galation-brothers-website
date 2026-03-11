@@ -23,15 +23,17 @@ const Footer: React.FC = () => {
               />
             </div>
             <p className="text-gray-400 mb-6 text-sm leading-relaxed">
-              Galation Brothers is a leading insurance provider in Zimbabwe, committed to delivering excellence and reliability through our partnership with AFC Holdings.
+              Galation Brothers is a leading insurance provider in Zimbabwe, committed to delivering excellence and reliability through our partnership with <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-300">AFC Holdings</a>.
             </p>
             <div className="flex items-center gap-2 mt-4">
               <span className="text-xs text-gray-500 uppercase font-semibold">Partnered with</span>
-              <img
-                alt="AFC"
-                className="h-30 w-auto  rounded px-1"
-                src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
-              />
+              <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer">
+                <img
+                  alt="AFC"
+                  className="h-30 w-auto  rounded px-1"
+                  src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
+                />
+              </a>
             </div>
           </div>
           <div className="lg:col-span-2">
@@ -146,7 +148,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; 2026 Galation Brothers. All rights reserved. | Powered by AFC Holdings</p>
+          <p>&copy; 2026 Galation Brothers. All rights reserved. | Powered by ArrowTech</p>
         </div>
       </div>
     </footer>

@@ -76,11 +76,13 @@ const AboutPage: React.FC = () => {
             <div className="lg:flex">
               <div className="lg:w-1/2 p-10 flex flex-col justify-center">
                 <div className="flex items-center space-x-4 mb-6">
-                  <img
-                    alt="Galations Logo"
-                    className="h-12 w-auto"
-                    src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
-                  />
+                  <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer">
+                    <img
+                      alt="Galations Logo"
+                      className="h-12 w-auto"
+                      src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
+                    />
+                  </a>
                   <span className="text-3xl text-gray-300 font-light">|</span>
                   <img
                     alt="AFC Holdings Logo"
@@ -89,10 +91,10 @@ const AboutPage: React.FC = () => {
                   />
                 </div>
                 <h3 className="text-2xl font-display font-bold text-text-light dark:text-white mb-4">
-                  Strengthened by AFC Holdings
+                  Strengthened by <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">AFC Holdings</a>
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Our strategic partnership with AFC Holdings is the bedrock of our financial stability. As we grow together, AFC's legacy in agricultural finance and development banking provides Galations Brothers with the capital depth and institutional knowledge required to underwrite complex risks across Zimbabwe.
+                  Our strategic partnership with <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:text-green-500 dark:text-green-400 dark:hover:text-green-300 font-semibold">AFC Holdings</a> is the bedrock of our financial stability. As we grow together, <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer" className="text-green-700 hover:text-green-500 dark:text-green-400 dark:hover:text-green-300 font-semibold">AFC</a>'s legacy in agricultural finance and development banking provides Galations Brothers with the capital depth and institutional knowledge required to underwrite complex risks across Zimbabwe.
                 </p>
                 <a className="inline-flex items-center font-semibold text-green-700 hover:text-green-500 dark:text-green-400 dark:hover:text-green-300" href="#">
                   Learn about our partnership <FaArrowRight className="ml-1 text-sm" />

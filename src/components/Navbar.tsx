@@ -61,11 +61,13 @@ const Navbar: React.FC = () => {
                   <span className="text-[9px] uppercase font-bold text-gray-500 dark:text-gray-400 leading-tight tracking-wider">
                     In Partnership With
                   </span>
-                  <img
-                    alt="AFC Holdings Logo"
-                    className="h-9 w-auto mt-1 opacity-80 hover:opacity-100 transition-opacity"
-                    src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
-                  />
+                  <a href="https://www.afcholdings.co.zw/" target="_blank" rel="noopener noreferrer">
+                    <img
+                      alt="AFC Holdings Logo"
+                      className="h-9 w-auto mt-1 opacity-80 hover:opacity-100 transition-opacity"
+                      src={`${import.meta.env.BASE_URL}assets/AFC_logo.png`}
+                    />
+                  </a>
                 </div>
               </div>
             </div>
