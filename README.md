@@ -54,7 +54,7 @@ Official website for **Galation Brothers Insurance Zimbabwe** — comprehensive 
 ```bash
 # Clone the repository
 git clone https://github.com/brianproducedit/galation-brothers-website.git
-cd galation-brothers-website
+cd galation-brothers-website/react_frontend
 
 # Install dependencies
 npm install
@@ -85,7 +85,7 @@ The dev server starts at `http://localhost:5173`.
 
 ## 🔧 Environment Variables
 
-Create a `.env` file in the project root. All client-exposed variables **must** be prefixed with `VITE_`.
+Create a `.env` file in the `react_frontend/` directory. All client-exposed variables **must** be prefixed with `VITE_`.
 
 | Variable                             | Description                        | Required |
 | ------------------------------------ | ---------------------------------- | -------- |
@@ -101,7 +101,7 @@ Create a `.env` file in the project root. All client-exposed variables **must** 
 | `VITE_SOCIAL_LINKEDIN`               | LinkedIn company URL                | No       |
 | `VITE_SOCIAL_INSTAGRAM`              | Instagram profile URL               | No       |
 
-> **Note**: See [`.env.example`](.env.example) for a template with placeholder values.
+> **Note**: See [`.env.example`](react_frontend/.env.example) for a template with placeholder values.
 
 ---
 
@@ -111,43 +111,42 @@ Create a `.env` file in the project root. All client-exposed variables **must** 
 .
 ├── .github/
 │   └── workflows/
-│       └── ci.yml              # GitHub Actions CI pipeline (lint + build)
-├── public/
-│   └── assets/                 # Static assets (logos, images)
-├── src/
-│   ├── components/             # Reusable UI components
-│   │   ├── Button.tsx          # Button component
-│   │   ├── Card.tsx            # Card component
-│   │   ├── Footer.tsx          # Site footer with newsletter signup
-│   │   ├── Layout.tsx          # Main layout wrapper with Outlet
-│   │   └── Navbar.tsx          # Responsive navigation bar
-│   ├── contexts/               # React Context providers
-│   │   └── DarkModeContext.tsx  # Dark/light mode toggle
-│   ├── hooks/                  # Custom React hooks
-│   ├── pages/                  # Route page components
-│   │   ├── AboutPage.tsx       # About us & AFC partnership
-│   │   ├── ContactPage.tsx     # Contact form with quote request
-│   │   ├── FeedbackPage.tsx    # Customer feedback with star rating
-│   │   ├── HomePage.tsx        # Landing page
-│   │   └── ServicesPage.tsx    # Insurance services catalog
-│   ├── test/                   # Test utilities and setup
-│   ├── types/                  # TypeScript type definitions
-│   ├── App.tsx                 # Router configuration
-│   ├── App.css                 # App-level styles
-│   ├── index.css               # Global styles & Tailwind imports
-│   └── main.tsx                # Application entry point
-├── .env.example                # Environment variable template
-├── .prettierrc                 # Prettier formatting config
-├── eslint.config.js            # ESLint flat configuration
-├── index.html                  # HTML entry point
-├── package.json                # Dependencies and scripts
-├── postcss.config.js           # PostCSS configuration
-├── tailwind.config.js          # Tailwind CSS theme customization
-├── tsconfig.json               # TypeScript project references
-├── tsconfig.app.json           # App TypeScript config
-├── tsconfig.node.json          # Node/Vite TypeScript config
-├── vercel.json                 # Vercel deployment & SPA rewrite config
-└── vite.config.ts              # Vite build configuration
+│       └── ci.yml                  # GitHub Actions CI pipeline (lint + build)
+├── docs/                           # Project documentation & roadmaps
+├── react_frontend/                 # React application (Vite + TypeScript)
+│   ├── public/
+│   │   └── assets/                 # Static assets (logos, images)
+│   ├── src/
+│   │   ├── components/             # Reusable UI components
+│   │   │   ├── Button.tsx
+│   │   │   ├── Card.tsx
+│   │   │   ├── Footer.tsx          # Site footer with newsletter signup
+│   │   │   ├── Layout.tsx          # Main layout wrapper with Outlet
+│   │   │   └── Navbar.tsx          # Responsive navigation bar
+│   │   ├── contexts/               # React Context providers
+│   │   ├── hooks/                  # Custom React hooks
+│   │   ├── pages/                  # Route page components
+│   │   │   ├── AboutPage.tsx
+│   │   │   ├── ContactPage.tsx
+│   │   │   ├── FeedbackPage.tsx
+│   │   │   ├── HomePage.tsx
+│   │   │   └── ServicesPage.tsx
+│   │   ├── test/                   # Test utilities and setup
+│   │   ├── types/                  # TypeScript type definitions
+│   │   ├── App.tsx                 # Router configuration
+│   │   ├── index.css               # Global styles & Tailwind imports
+│   │   └── main.tsx                # Application entry point
+│   ├── .env.example                # Environment variable template
+│   ├── .prettierrc                 # Prettier formatting config
+│   ├── eslint.config.js            # ESLint flat configuration
+│   ├── index.html                  # HTML entry point
+│   ├── package.json                # Dependencies and scripts
+│   ├── tailwind.config.js          # Tailwind CSS theme customization
+│   ├── tsconfig.json               # TypeScript project references
+│   ├── vercel.json                 # Vercel deployment & SPA rewrite config
+│   └── vite.config.ts              # Vite build configuration
+├── .gitignore                      # Root-level git ignores
+└── README.md                       # This file
 ```
 
 ---
@@ -202,16 +201,17 @@ Vercel's native GitHub integration handles all deployments:
 ### Vercel Setup (Recommended)
 
 1. **Import your GitHub repository** at [vercel.com/new](https://vercel.com/new)
-2. Vercel auto-detects the **Vite** framework — no manual config needed
-3. **Add environment variables** in the Vercel project dashboard:
+2. **Set the Root Directory** to `react_frontend` in the project settings
+3. Vercel auto-detects the **Vite** framework — no manual config needed
+4. **Add environment variables** in the Vercel project dashboard:
    - Go to **Settings → Environment Variables**
    - Add all `VITE_*` variables from your `.env` file
    - Apply to **Production**, **Preview**, and **Development** environments
-4. **Deploy** — Vercel builds and deploys automatically on every push to `main`
+5. **Deploy** — Vercel builds and deploys automatically on every push to `main`
 
 #### SPA Routing
 
-The [`vercel.json`](vercel.json) file is pre-configured with rewrites to support client-side routing:
+The [`vercel.json`](react_frontend/vercel.json) file is pre-configured with rewrites to support client-side routing:
 
 ```json
 {
@@ -254,7 +254,7 @@ This project uses:
 - **ESLint 9** with flat config — TypeScript, React Hooks, and React Refresh rules
 - **Prettier** — consistent formatting (no semicolons, single quotes, trailing commas)
 
-See [`.prettierrc`](.prettierrc) and [`eslint.config.js`](eslint.config.js) for details.
+See [`.prettierrc`](react_frontend/.prettierrc) and [`eslint.config.js`](react_frontend/eslint.config.js) for details.
 
 ---
 
