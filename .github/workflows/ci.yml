@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Cancel in-progress runs for the same branch/PR
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-and-build:
+    name: Lint & Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v5
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Type Check & Build
+        run: npm run build
+        env:
+          # Provide dummy env vars so the build doesn't fail on missing values.
+          # Real values are configured in Vercel's dashboard for deployment.
+          VITE_FORMSPREE_CONTACT_ENDPOINT: ci-placeholder
+          VITE_FORMSPREE_FEEDBACK_ENDPOINT: ci-placeholder
+          VITE_FORMSPREE_NEWSLETTER_ENDPOINT: ci-placeholder
+          VITE_RECAPTCHA_SITE_KEY: ci-placeholder
+          VITE_WHATSAPP_NUMBER: '+0000000000'
+          VITE_EMAIL_INFO: ci@placeholder.com
+          VITE_EMAIL_CLAIMS: ci@placeholder.com
+          VITE_SOCIAL_FACEBOOK: https://facebook.com
+          VITE_SOCIAL_TWITTER: https://twitter.com
+          VITE_SOCIAL_LINKEDIN: https://linkedin.com
+          VITE_SOCIAL_INSTAGRAM: https://instagram.com

@@ -1,5 +1,5 @@
 import React from 'react';
-import { createHashRouter, RouterProvider } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import DarkModeProvider from './contexts/DarkModeContext';
 import Layout from './components/Layout';
 import HomePage from './pages/HomePage';
@@ -13,7 +13,7 @@ import AboutPage from './pages/AboutPage';
  * Sets up React Router with all page routes and wraps with DarkModeProvider.
  */
 const App: React.FC = () => {
-  const router = createHashRouter([
+  const router = createBrowserRouter([
     {
       path: '/',
       element: <Layout />,

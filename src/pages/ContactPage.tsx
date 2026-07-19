@@ -141,7 +141,7 @@ const ContactPage: React.FC = () => {
                       className="focus:ring-primary focus:border-primary block w-full pl-10 sm:text-sm border-slate-300 dark:border-slate-600 rounded-md dark:bg-slate-800 dark:text-white py-3"
                       id="name"
                       name="name"
-                      placeholder="John Doe"
+                      placeholder="Tadiwa Dube"
                       required
                       type="text"
                     />
@@ -160,7 +160,7 @@ const ContactPage: React.FC = () => {
                       className="focus:ring-primary focus:border-primary block w-full pl-10 sm:text-sm border-slate-300 dark:border-slate-600 rounded-md dark:bg-slate-800 dark:text-white py-3"
                       id="email"
                       name="email"
-                      placeholder="john@example.com"
+                      placeholder="dube@example.com"
                       required
                       type="email"
                     />
