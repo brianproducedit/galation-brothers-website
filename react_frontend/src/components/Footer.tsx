@@ -148,7 +148,7 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
-          <p>&copy; 2026 Galation Brothers. All rights reserved. | Powered by ArrowTech</p>
+          <p>&copy; 2026 Galation Brothers. All rights reserved.</p>
         </div>
       </div>
     </footer>
